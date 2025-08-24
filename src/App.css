@@ -1,0 +1,556 @@
+.app {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #212529;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.app header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app header h1 {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.app header p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 300px 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.app-section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  color: #212529;
+}
+
+/* People Bank Panel */
+.people-bank-panel h2 {
+  margin-top: 0;
+}
+
+.add-person {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.add-person input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-person button {
+  padding: 0.5rem 1rem;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-person button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.people-list .empty-state {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.person-item {
+  padding: 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.view-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person-name {
+  font-weight: 500;
+  color: #212529;
+}
+
+.person-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.person-actions button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: white;
+  color: #212529;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.edit-person {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.edit-person input {
+  flex: 1;
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #212529;
+}
+
+/* Import Export Panel */
+.import-export-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.import-export-panel h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.import-section {
+  margin-bottom: 1rem;
+}
+
+.import-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.import-buttons button,
+.export-section button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #212529;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.import-buttons button:hover,
+.export-section button:hover:not(:disabled) {
+  background: #f8f9fa;
+}
+
+.sample-button {
+  background: #e9ecef !important;
+  color: #6c757d;
+}
+
+.export-section button:disabled {
+  background: #f8f9fa;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.import-help {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.import-help small {
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+/* Receipt Draft Editor */
+.receipt-draft-editor h2 {
+  margin-top: 0;
+}
+
+.receipt-meta {
+  margin-bottom: 1.5rem;
+}
+
+.meta-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.meta-row input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #212529;
+}
+
+.items-section h3 {
+  margin-bottom: 1rem;
+}
+
+.add-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.item-form {
+  display: grid;
+  grid-template-columns: 2fr 120px 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.item-form input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #212529;
+}
+
+.payer-selection {
+  margin-bottom: 1rem;
+}
+
+.add-item button {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-item button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Payer Selector */
+.payer-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payer-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.payer-controls button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: white;
+  color: #212529;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.payer-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.payer-chip {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: white;
+  color: #212529;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.payer-chip.selected {
+  background: #646cff;
+  color: white;
+  border-color: #646cff;
+}
+
+.no-people {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Items Table */
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.items-table th,
+.items-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #212529;
+}
+
+.items-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.items-table .editing input {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #212529;
+}
+
+.items-table button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: white;
+  color: #212529;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+
+.items-table .no-payers {
+  background-color: #fff8dc;
+  border-left: 3px solid #ffc107;
+}
+
+.items-table .needs-assignment {
+  background-color: #fff8dc;
+}
+
+.no-payers-text {
+  color: #856404;
+  font-style: italic;
+}
+
+.no-payers-text strong {
+  color: #dc3545;
+}
+
+/* Receipt Totals */
+.receipt-totals {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.totals-row:last-child {
+  margin-bottom: 0;
+}
+
+.total-grand {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+.totals-row input {
+  width: 80px;
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-align: right;
+  color: #212529;
+}
+
+/* Results Panel */
+.results-panel h2 {
+  margin-top: 0;
+}
+
+.warnings {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.warnings h3 {
+  margin-top: 0;
+  color: #856404;
+}
+
+.warnings ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.warning {
+  color: #856404;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.calculation-results {
+  margin-top: 1rem;
+}
+
+.per-person-breakdown h3 {
+  margin-bottom: 1rem;
+}
+
+.breakdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.breakdown-table th,
+.breakdown-table td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.breakdown-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+}
+
+.person-name {
+  font-weight: 500;
+  color: #212529;
+}
+
+.total-owed {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.receipt-summary {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+}
+
+.rounding-adjustments {
+  background: #e7f3ff;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.rounding-adjustments h4 {
+  margin-top: 0;
+  color: #004085;
+}
+
+.rounding-note {
+  color: #004085;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.rounding-adjustments ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #004085;
+}
+
+.result-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.copy-button,
+.export-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.copy-button {
+  background: #17a2b8;
+  color: white;
+}
+
+.export-button {
+  background: #28a745;
+  color: white;
+}
+
+.copy-button:hover,
+.export-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1200px) {
+  .app-main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .item-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-form {
+    grid-template-columns: 1fr;
+  }
+}
